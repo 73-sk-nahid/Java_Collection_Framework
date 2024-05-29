@@ -1,4 +1,6 @@
-public class Student {
+
+
+public class Student implements Comparable<Student>{
     String Name;
     int rollNo;
 
@@ -29,11 +31,14 @@ public class Student {
         if (getClass() != obj.getClass())
             return false;
         Student other = (Student) obj;
-        if (rollNo != other.rollNo)
-            return false;
-        return true;
+        return rollNo == other.rollNo;
+    }
+
+    @Override
+    public int compareTo(Student that) {
+        //return this.rollNo - that.rollNo;  //if want to sort using roll no
+        return this.Name.compareTo(that.Name);  //if want to sort using name
     }
     
-
     
 }   
