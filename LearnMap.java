@@ -6,6 +6,9 @@ public class LearnMap {
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<>();
 
+        /*sing TreeMap we can insert the value in sorted way. 
+        which actually use BinaryTree method to insert the value.*/
+
         map.put("Bangladesh", "Dhaka");
         map.put("India", "New Delhi");
         
